@@ -1,0 +1,24 @@
+.kasa-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 100px 50px 100px;
+
+    &-img{
+        width: 210.32px;
+        height: 68px;
+    }
+
+    &-nav{
+        display: flex;
+        gap : 57px;
+
+        & a{
+            color: $main-color;
+            font-size: 24px;
+            &:hover{
+                text-decoration-line: underline;
+            }
+        }
+    }
+}

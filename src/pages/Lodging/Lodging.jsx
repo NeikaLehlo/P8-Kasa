@@ -1,9 +1,12 @@
 import React from "react"
+import Header from "../../components/Header/Header"
+import "../../main.scss"
 
 function Lodging() {
     return (
-        <div>
-            <h1>Fiche Logement</h1>
+        <div className="kasa-lodging">
+            <Header />
+            <h1>Fiche logement</h1>
         </div>
     )
 }

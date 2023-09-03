@@ -5,6 +5,7 @@ import Home from './pages/Home/Home'
 import Lodging from './pages/Lodging/Lodging'
 import About from './pages/About/About'
 import Error from './pages/Error-page/Error-page'
+import "./main.scss"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
