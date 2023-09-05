@@ -1,0 +1,23 @@
+.kasa-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 30px;
+    padding: 66px 32% 30px 32%;
+    background-color: black;
+
+    @media (max-width: 550px){
+        padding-bottom: 58px;
+    }
+
+    &-p{
+        color: white;
+        text-align: center;
+        font-size: 24px;
+
+        @media (max-width: 550px){
+            font-size: 12px;
+        }
+    }
+}
