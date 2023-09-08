@@ -2,12 +2,14 @@
 @import "./assets/style-utils/reset.scss";
 @import "./assets/style-utils/base.scss";
 @import "./assets/style-utils/variables.scss";
-@import "./pages/Home/Home.scss";
-@import "./pages/Lodging/Lodging.scss";
-@import "./pages/About/About.scss";
-@import "./pages/Error-page/Error-page.scss";
-@import "./components/Header/Header.scss";
-@import "./components/Footer/Footer.scss";
+@import "./pages/home/home.scss";
+@import "./pages/lodging/lodging.scss";
+@import "./pages/about/about.scss";
+@import "./pages/error-page/error-page.scss";
+@import "./components/header/header.scss";
+@import "./components/footer/footer.scss";
+@import "./components/banner/banner.scss";
+@import "./components/collapse/collapse.scss";
 
 
 

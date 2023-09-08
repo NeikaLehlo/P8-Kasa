@@ -1,0 +1,65 @@
+.kasa-banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 7% 40px 7%;
+    height: 225px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index:1;
+
+        @media (max-width: 550px){
+            border-radius: 10px;
+        }
+    }
+       
+    @media (max-width: 550px){
+        margin: 0 20px 22px 20px;;
+        height: 111px;
+    }
+
+    &-img{
+        display: block;
+        position: relative;
+        border-radius: 25px;
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        z-index:0;
+
+        @media (max-width: 550px){
+            border-radius: 10px;
+        }
+    }
+
+    &-p{
+        position: absolute;
+        display:flex;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 48px;
+        z-index: 2;
+
+        @media (max-width: 550px){
+            font-size: 24px;
+            width: auto;
+            left: 16px;
+        }
+    }
+
+
+}
