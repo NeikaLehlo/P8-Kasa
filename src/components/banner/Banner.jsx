@@ -1,9 +1,12 @@
 import "../../main.scss"
 
-function Banner({children}) {
+function Banner({img , title}) {
     return (
         <div className="kasa-banner">
-            {children}
+            <img className="kasa-banner-img" src={img} alt="photo banner"/>
+            {
+                !title ? "" : (<h1 className="kasa-banner-title">{title}</h1>)
+            }
         </div>
     )
 }

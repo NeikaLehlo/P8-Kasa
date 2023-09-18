@@ -10,9 +10,7 @@ function About() {
     return (
         <div className="kasa-about">
             <Header />
-            <Banner>
-                <img className="kasa-banner-img" src={banner} alt="picture's banner" />
-            </Banner>
+            <Banner img={banner} />
             <section className="kasa-collapse">
                 <Collapse
                     title="Fiabilité"
