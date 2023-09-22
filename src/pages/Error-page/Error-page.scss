@@ -1,0 +1,39 @@
+.kasa-error{
+    color: $main-color;
+    text-align: center;
+
+    &-title{
+        font-size: 288px;
+        font-weight: 700;
+        
+    }
+
+    &-p{
+        font-size: 36px;
+    }
+
+    &-redir{
+        margin: 139px 0;
+        
+        & a{
+        color: $main-color;
+        font-size: 18px;
+        text-decoration-line: underline;
+
+        @media (max-width: 550px){
+                font-size: 14px;      
+        }
+
+            &:hover{
+                
+                font-size: 19px;
+
+                @media (max-width: 550px){
+                    font-size: 15px;      
+            }
+            }
+        }
+
+        
+    }
+}

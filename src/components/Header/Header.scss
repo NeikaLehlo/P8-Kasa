@@ -23,18 +23,15 @@
         @media (max-width: 550px){
             gap: 26px;
         }
-        
 
         &-active{
             text-decoration-line: underline;
         }
-        
 
         & a{
-            white-space: nowrap;
+            // white-space: nowrap;
             color: $main-color;
             font-size: 24px;
-            
 
             @media (max-width: 550px){
                 font-size: 12px;

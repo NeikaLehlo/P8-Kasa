@@ -1,5 +1,5 @@
 import React from "react"
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Header from "../../components/header/Header"
 import Footer from "../../components/footer/Footer"
 import "../../main.scss"
@@ -8,16 +8,11 @@ function Error() {
     return (
         <div className="kasa-error">
             <Header />
-            <h1>404</h1>
-            <p>Oups! La page que vous recherchez n'existe pas!</p>
-            <NavLink
-                    to="/"
-                    className={({ isActive, isPending }) =>
-                        isPending ? "kasa-header-nav-pending" : isActive ? "kasa-header-nav-active" : ""
-                    }
-                    >
-                    Retourner sur la page d’accueil
-                </NavLink>
+            <h1 className="kasa-error-title">404</h1>
+            <p className="kasa-error-p">Oups! La page que vous recherchez n'existe pas!</p>
+            <nav className="kasa-error-redir">
+                <Link to={`/`}>Retourner sur la page d'accueil</Link>
+            </nav>
             <Footer />
         </div>
     )

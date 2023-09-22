@@ -1,0 +1,22 @@
+.kasa-lodging{
+    &-body{
+        margin: 0 7% 50px 7%
+    }
+
+
+
+
+    &-collapse{
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+    @media (max-width: 550px){
+        margin: 0px 5% 20px 5%;
+        gap: 20px;
+    }
+}
+}
+
+
