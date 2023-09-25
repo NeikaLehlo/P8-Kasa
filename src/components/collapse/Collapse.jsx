@@ -1,18 +1,17 @@
 import { useState } from 'react'
-import arrowUp from "../../assets/icons/arrow-up.svg"
-import arrowDown from "../../assets/icons/arrow-down.svg"
+import arrow from "../../assets/icons/arrow.svg"
 import "../../main.scss"
 
 function Collapse( {title, text}) {
     const [isOpen, setIsOpen] = useState(false)
 
-    return isOpen ? (
+    return(
         <div className="kasa-collapse-div">
-            <div className="kasa-collapse-title">
+            <div className="kasa-collapse-title" onClick={() => setIsOpen(!isOpen)}>
                 <h2>{title}</h2>
-                <img className="kasa-collapse-arrow" src={arrowDown} alt="arrow to close the collapse" onClick={() => setIsOpen(false)} />
+                <img className={isOpen? "kasa-collapse-arrow" : "kasa-collapse-arrow-close"} src={arrow} alt="arrow to open/close the collapse" />
             </div>
-            <div className="kasa-collapse-text">
+            <div className={isOpen? "kasa-collapse-text" : "kasa-collapse-text-hidden"}>
             { typeof text === "string" && (
                 <p>{text}</p>
             ) 
@@ -24,15 +23,7 @@ function Collapse( {title, text}) {
             ))}
             </div>       
         </div>
-    ) : (
-        <div className="kasa-collapse-div">
-            <div className="kasa-collapse-title">
-                <h2>{title}</h2>
-                <img className="kasa-collapse-arrow" src={arrowUp} alt="arrow to close the collapse" onClick={() => setIsOpen(true)} />
-            </div>
-        </div>
-    )
-
+    ) 
 }
 
 export default Collapse

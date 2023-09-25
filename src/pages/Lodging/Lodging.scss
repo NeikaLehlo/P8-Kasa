@@ -3,20 +3,16 @@
         margin: 0 7% 50px 7%
     }
 
-
-
-
     &-collapse{
-    
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     
-    @media (max-width: 550px){
-        margin: 0px 5% 20px 5%;
-        gap: 20px;
+        @media (max-width: 550px){
+            grid-template-columns: 1fr;
+            margin: 0px 5% 20px 5%;
+            gap: 20px;
+        }
     }
 }
-}
-
 

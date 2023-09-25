@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react"
 import Header from "../../components/header/Header"
 import Carousel from "../../components/carousel/Carousel"
@@ -37,21 +37,21 @@ function Lodging() {
                 <div>
                     <Header />
                     <div className="kasa-lodging-body">
-                    <Carousel />
-                    <h1>{lodgingData.title}</h1>
-                    <p>{lodgingData.location}</p>
-                    {console.log(lodgingData)}
-                    {/* si lodgingData.tags existe alors (...) */}
-                    { lodgingData.tags && (
-                        <div className="kasa-lodging-tag">
-                        {lodgingData.tags.map((tag, index)=>(
-                            <p key={tag + index}>{tag}</p>
-                        ))}
-                    </div>)}
-                    <section className="kasa-lodging-collapse">
-                        <Collapse title="Description" text={lodgingData.description} />
-                        <Collapse title="Équipements" text={lodgingData.equipments} />
-                    </section>
+                        <Carousel />
+                        <h1>{lodgingData.title}</h1>
+                        <p>{lodgingData.location}</p>
+                        {console.log(lodgingData)}
+                        {/* si lodgingData.tags existe alors (...) */}
+                        { lodgingData.tags && (
+                            <div className="kasa-lodging-tag">
+                            {lodgingData.tags.map((tag, index)=>(
+                                <p key={tag + index}>{tag}</p>
+                            ))}
+                        </div>)}
+                        <section className="kasa-lodging-collapse">
+                            <Collapse title="Description" text={lodgingData.description} />
+                            <Collapse title="Équipements" text={lodgingData.equipments} />
+                        </section>
                     </div>
                     <Footer />
                 </div>                    
