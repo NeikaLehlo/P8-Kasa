@@ -45,7 +45,9 @@ function Lodging() {
                         { lodgingData.tags && (
                             <div className="kasa-lodging-tag">
                             {lodgingData.tags.map((tag, index)=>(
-                                <p key={tag + index}>{tag}</p>
+                                <div className="kasa-lodging-tag-text" key={tag + index}>
+                                    <p >{tag}</p>
+                                </div>
                             ))}
                         </div>)}
                         <section className="kasa-lodging-collapse">

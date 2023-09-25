@@ -14,5 +14,40 @@
             gap: 20px;
         }
     }
+
+    &-tag{
+        display : flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+        width: 100%;
+
+        @media (max-width: 550px){
+            margin: 0px 5% 20px 5%;
+            
+        }
+
+        &-text{
+            display: flex;
+            min-width: 115px; 
+            height: 25px; 
+            padding: 0 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background: #FF6060; 
+            color: white;
+            font-size: 14px; 
+
+            @media (max-width: 550px){
+                
+                font-size: 10px;
+                height: 18px;
+                min-width: 85px; 
+                border-radius: 5px;
+            }
+
+        }
+    }
 }
 
