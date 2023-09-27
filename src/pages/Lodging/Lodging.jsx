@@ -14,7 +14,7 @@ function Lodging() {
     const [error, setError] = useState(false)
 
     useEffect(() => {
-            fetch("/datas/lodgings.json")
+            fetch('/datas/lodgings.json')
                 .then((response)=>  response.ok ? response.json() : setError(true))
                 .then((data) => { 
                     console.log(data.length)
@@ -37,10 +37,12 @@ function Lodging() {
                 <div>
                     <Header />
                     <div className="kasa-lodging-body">
-                        <Carousel />
+                        {/* {console.log(lodgingData.pictures)} */}
+                        { lodgingData.pictures && ( 
+                        <Carousel imgs={lodgingData.pictures} />)}
                         <h1>{lodgingData.title}</h1>
                         <p>{lodgingData.location}</p>
-                        {console.log(lodgingData)}
+                        
                         {/* si lodgingData.tags existe alors (...) */}
                         { lodgingData.tags && (
                             <div className="kasa-lodging-tag">
@@ -49,7 +51,7 @@ function Lodging() {
                                     <p >{tag}</p>
                                 </div>
                             ))}
-                        </div>)}
+                            </div>)}
                         <section className="kasa-lodging-collapse">
                             <Collapse title="Description" text={lodgingData.description} />
                             <Collapse title="Équipements" text={lodgingData.equipments} />

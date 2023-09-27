@@ -41,9 +41,7 @@
             @media (max-width: 550px){
                 height:20px;
             }
-        }
-
-        
+        }        
     }
 
     &-text{
@@ -58,9 +56,9 @@
         color: $main-color;
         font-size: 18px;
         overflow-y: hidden;
-        height: 100%;
+        max-height: 1000px;
         transform-origin: top;
-        transition: height 500ms, padding 500ms;
+        transition: max-height 600ms, padding 600ms;
 
         @media (max-width: 550px){
             font-size: 12px;
@@ -68,7 +66,7 @@
         }
 
         &-hidden{
-            height: 0;
+            max-height: 0;
             padding: 0 20px;
             transform-origin: bottom;
             display: flex;
@@ -81,14 +79,11 @@
             color: $main-color;
             font-size: 18px;
             overflow-y: hidden;
-            transition: height 500ms, padding 500ms;
+            transition: max-height 600ms, padding 600ms;
 
             @media (max-width: 550px){
                 font-size: 12px;
-                // padding: 13px 20px 20px 20px;
             }
-        }
-
-        
+        }  
     }
 }

@@ -1,0 +1,70 @@
+.kasa-carousel{
+  margin-bottom : 30px;
+  height: 415px;
+
+  @media (max-width: 550px){
+    margin-bottom: 15px;
+    height: 255px;
+  }
+
+
+  &-img{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &-nav{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:163px;
+    left:7%;
+    width: 86%;
+    height: 415px;
+
+    @media (max-width: 550px){
+        top: 93.7333px;
+        left: 5.5%;
+        width : 89%;
+        height: 255px;
+    }
+
+
+    &-arrows{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 160px 2% 0 2%;
+
+        @media (max-width: 550px){
+            padding: 115px 2% 0 2%;
+        }
+
+        &-arrow{
+            @media (max-width: 550px){
+                height:24px;
+            }
+        }
+    }
+
+    &-text{
+        display: flex;
+        color: white;
+        font-size: 18px;
+        padding-top: 122px;
+
+        @media (max-width: 550px){
+            display: none;
+        }
+    }
+
+
+
+  }
+}

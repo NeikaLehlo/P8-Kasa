@@ -1,6 +1,10 @@
 .kasa-lodging{
     &-body{
-        margin: 0 7% 50px 7%
+        margin: 0 7% 50px 7%;
+
+        @media (max-width: 550px){
+            margin: 0 5.5% 25px 5.5%;
+        }
     }
 
     &-collapse{
