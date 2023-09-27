@@ -40,18 +40,32 @@ function Lodging() {
                         {/* {console.log(lodgingData.pictures)} */}
                         { lodgingData.pictures && ( 
                         <Carousel imgs={lodgingData.pictures} />)}
-                        <h1>{lodgingData.title}</h1>
-                        <p>{lodgingData.location}</p>
-                        
-                        {/* si lodgingData.tags existe alors (...) */}
-                        { lodgingData.tags && (
-                            <div className="kasa-lodging-tag">
-                            {lodgingData.tags.map((tag, index)=>(
-                                <div className="kasa-lodging-tag-text" key={tag + index}>
-                                    <p >{tag}</p>
+                        <div className="kasa-lodging-info">
+                            <div className="kasa-lodging-info-desc">
+                                <h1 className="kasa-lodging-info-desc-title">{lodgingData.title}</h1>
+                                <p className="kasa-lodging-info-desc-location">{lodgingData.location}</p>
+                                {/* si lodgingData.tags existe alors (...) */}
+                                { lodgingData.tags && (
+                                    <div className="kasa-lodging-info-desc-tag">
+                                    {lodgingData.tags.map((tag, index)=>(
+                                        <div className="kasa-lodging-info-desc-tag-text" key={tag + index}>
+                                            <p >{tag}</p>
+                                        </div>
+                                    ))}
+                                    </div>)}
+                            </div>
+                            <div className="kasa-lodging-info-hostRating">
+                                { lodgingData.host && (
+                                    <div className="kasa-lodging-info-hostRating-host">
+                                        <p className="kasa-lodging-info-hostRating-host-name">{lodgingData.host.name}</p>
+                                        <img className="kasa-lodging-info-hostRating-host-img" src={lodgingData.host.picture} alt="host pfp"></img>
+                                    </div>
+                                )}
+                                <div className="kasa-lodging-info-hostRating-rating">
+                                    Ici les étoiles
                                 </div>
-                            ))}
-                            </div>)}
+                            </div>
+                        </div>
                         <section className="kasa-lodging-collapse">
                             <Collapse title="Description" text={lodgingData.description} />
                             <Collapse title="Équipements" text={lodgingData.equipments} />

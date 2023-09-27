@@ -14,43 +14,109 @@
     
         @media (max-width: 550px){
             grid-template-columns: 1fr;
-            margin: 0px 5% 20px 5%;
+            margin-bottom: 20px;
             gap: 20px;
         }
     }
 
-    &-tag{
-        display : flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 24px;
-        width: 100%;
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:28px;
 
         @media (max-width: 550px){
-            margin: 0px 5% 20px 5%;
-            
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 15px;
         }
 
-        &-text{
+        &-desc{
             display: flex;
-            min-width: 115px; 
-            height: 25px; 
-            padding: 0 10px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            background: #FF6060; 
-            color: white;
-            font-size: 14px; 
+            flex-direction: column;
+            gap: 10px;
 
-            @media (max-width: 550px){
-                
-                font-size: 10px;
-                height: 18px;
-                min-width: 85px; 
-                border-radius: 5px;
+            &-title{
+                font-size: 36px;
+                color: $main-color;
+
+                @media (max-width: 550px){
+                    font-size: 18px;
+                }
             }
 
+            &-location{
+                font-size: 18px;
+                color: $main-color;
+
+                @media (max-width: 550px){
+                    font-size: 14px;
+                }
+            }
+        
+
+            &-tag{
+                display : flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 100%;
+
+                &-text{
+                    display: flex;
+                    min-width: 115px; 
+                    height: 25px; 
+                    padding: 0 10px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    background: #FF6060; 
+                    color: white;
+                    font-size: 14px; 
+
+                    @media (max-width: 550px){
+                        
+                        font-size: 10px;
+                        height: 18px;
+                        min-width: 85px; 
+                        border-radius: 5px;
+                    }
+
+                }
+            }
+        }
+
+        &-hostRating{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 550px){
+                flex-direction:row-reverse;
+            }
+
+            &-host{
+                display:flex;
+                align-items: center;
+                gap: 10px;
+
+                &-name{
+                    font-size: 18px;
+                    color: $main-color;
+
+                    @media (max-width: 550px){
+                        font-size: 12px;
+                    }
+                }
+
+                &-img{
+                    width:64px;
+                    border-radius: 50%;
+
+                    @media (max-width: 550px){
+                        width:32px;
+                    }
+                }
+            }
         }
     }
 }
