@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Header from "../../components/header/Header"
 import Carousel from "../../components/carousel/Carousel"
 import Collapse from "../../components/collapse/Collapse"
+import Rating from "../../components/rating/Rating"
 import Footer from "../../components/footer/Footer"
 import Error from '../../pages/Error-page/Error-page'
 import "../../main.scss"
@@ -16,18 +17,20 @@ function Lodging() {
     useEffect(() => {
             fetch('/datas/lodgings.json')
                 .then((response)=>  response.ok ? response.json() : setError(true))
+                // tester un return response.json dans un if classique
                 .then((data) => { 
-                    console.log(data.length)
+                    // console.log(data.length)
                     if (data.length < 1 ) {
                         return setError(true)
                     }
                     const lodging = data.find((element) => element.id===id);
                     if (!lodging){
                         return setError(true)
-                    }else 
+                    }else {
                     setLodgingData(lodging)
+                    }
                 }) 
-                .catch((error)=> console.log(error))
+                .catch((error)=>  console.log("mon erreur: " + error))
     } ,[id])
 
     return (
@@ -61,9 +64,7 @@ function Lodging() {
                                         <img className="kasa-lodging-info-hostRating-host-img" src={lodgingData.host.picture} alt="host pfp"></img>
                                     </div>
                                 )}
-                                <div className="kasa-lodging-info-hostRating-rating">
-                                    Ici les étoiles
-                                </div>
+                                <Rating rate={lodgingData.rating} />
                             </div>
                         </div>
                         <section className="kasa-lodging-collapse">

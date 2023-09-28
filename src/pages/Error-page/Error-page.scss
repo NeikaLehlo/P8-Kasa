@@ -5,15 +5,28 @@
     &-title{
         font-size: 288px;
         font-weight: 700;
+        margin: 89px 0 139px 0;
         
+        @media (max-width: 550px){
+            font-size: 96px;
+            margin: 86px 0 113px 0;
+        }
     }
 
     &-p{
         font-size: 36px;
+
+        @media (max-width: 550px){
+            font-size: 18px;
+        }
     }
 
     &-redir{
         margin: 139px 0;
+
+        @media (max-width: 550px){
+            margin: 113px 0;
+        }
         
         & a{
         color: $main-color;

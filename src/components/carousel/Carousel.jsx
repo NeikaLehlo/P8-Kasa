@@ -1,7 +1,6 @@
 import arrowLeft from "../../assets/icons/arrow-left.svg"
 import arrowRight from "../../assets/icons/arrow-right.svg"
 import { useState } from "react"
-import Error from '../../pages/Error-page/Error-page'
 import "../../main.scss"
 
 function Carousel({imgs}) {
@@ -21,14 +20,14 @@ function Carousel({imgs}) {
             { imgs.length > 1 ? (
                 <div className="kasa-carousel-nav">
                     <div className="kasa-carousel-nav-arrows">
-                        <img className="kasa-carousel-nav-arrows-arrow" src={arrowLeft} onClick={()=> clickLeft()}/>
+                        <img className="kasa-carousel-nav-arrows-arrow" src={arrowLeft} alt="left navigation arrow" onClick={()=> clickLeft()}/>
                         {/* {console.log(imgs.length)} */}
-                        <img className="kasa-carousel-nav-arrows-arrow" src={arrowRight} onClick={() => clickRight()}/>
+                        <img className="kasa-carousel-nav-arrows-arrow" src={arrowRight} alt="right navigation arrow" onClick={() => clickRight()}/>
                     </div>
                     <p className="kasa-carousel-nav-text">{isArrow}/{imgs.length}</p>
                 </div>
             ):null }
-            {console.log(imgs[isArrow-1])}
+            {/* {console.log(imgs[isArrow-1])} */}
             
            
         </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&display=swap');
 @import "./assets/style-utils/reset.scss";
 @import "./assets/style-utils/base.scss";
 @import "./assets/style-utils/variables.scss";
@@ -12,6 +12,7 @@
 @import "./components/collapse/collapse.scss";
 @import "./components/card/card.scss";
 @import "./components/carousel/carousel.scss";
+@import "./components/rating/rating.scss";
 
 
 
