@@ -11,16 +11,14 @@ function Header() {
                     to="/"
                     className={({ isActive, isPending }) =>
                         isPending ? "kasa-header-nav-pending" : isActive ? "kasa-header-nav-active" : ""
-                    }
-                    >
+                    }>
                     Accueil
                 </NavLink>
                 <NavLink
                     to="/about"
                     className={({ isActive, isPending }) =>
                         isPending ? "kasa-header-nav-pending" : isActive ? "kasa-header-nav-active" : ""
-                    }
-                    >
+                    }>
                     À Propos
                 </NavLink>
             </nav>

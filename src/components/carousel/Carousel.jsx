@@ -21,15 +21,11 @@ function Carousel({imgs}) {
                 <div className="kasa-carousel-nav">
                     <div className="kasa-carousel-nav-arrows">
                         <img className="kasa-carousel-nav-arrows-arrow" src={arrowLeft} alt="left navigation arrow" onClick={()=> clickLeft()}/>
-                        {/* {console.log(imgs.length)} */}
                         <img className="kasa-carousel-nav-arrows-arrow" src={arrowRight} alt="right navigation arrow" onClick={() => clickRight()}/>
                     </div>
                     <p className="kasa-carousel-nav-text">{isArrow}/{imgs.length}</p>
                 </div>
             ):null }
-            {/* {console.log(imgs[isArrow-1])} */}
-            
-           
         </div>
     )
 }

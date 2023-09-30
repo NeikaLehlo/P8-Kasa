@@ -65,6 +65,10 @@
             padding: 13px 20px 20px 20px;
         }
 
+        & p{
+            font-weight: 400;
+        }
+
         &-hidden{
             max-height: 0;
             padding: 0 20px;
@@ -80,6 +84,10 @@
             font-size: 18px;
             overflow-y: hidden;
             transition: max-height 600ms, padding 600ms;
+
+            & p{
+                font-weight:400;
+            }
 
             @media (max-width: 550px){
                 font-size: 12px;

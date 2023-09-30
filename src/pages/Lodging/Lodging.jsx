@@ -33,6 +33,7 @@ function Lodging() {
                 .catch((error)=>  console.log("mon erreur: " + error))
     } ,[id])
 
+
     return (
 
         <div className="kasa-lodging">
@@ -42,7 +43,8 @@ function Lodging() {
                     <div className="kasa-lodging-body">
                         {/* {console.log(lodgingData.pictures)} */}
                         { lodgingData.pictures && ( 
-                        <Carousel imgs={lodgingData.pictures} />)}
+                        <Carousel imgs={lodgingData.pictures} />
+                        )}
                         <div className="kasa-lodging-info">
                             <div className="kasa-lodging-info-desc">
                                 <h1 className="kasa-lodging-info-desc-title">{lodgingData.title}</h1>
@@ -55,7 +57,8 @@ function Lodging() {
                                             <p >{tag}</p>
                                         </div>
                                     ))}
-                                    </div>)}
+                                    </div>
+                                )}
                             </div>
                             <div className="kasa-lodging-info-hostRating">
                                 { lodgingData.host && (
